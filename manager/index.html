@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>小米管理系统</title>
+		<!-- 网站的图标 -->
+		<link rel="icon" href="image/favicon.ico" />
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="css/table.css" />
+		<script src="../js/jquery-3.6.1.min.js"></script>
+		<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+		<script src="../login/js/manager.js"></script>
+		<!-- https://fontawesome.com/v5/icons/times?s=solid -->
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="sidebar">
+				<div class="bg_shadow"></div>
+				<div class="sidebar_inner">
+					<div class="close">
+						<i class="fas fa-times"></i>
+					</div>
+					<div class="profile_info">
+						<div class="profile_img">
+							<img src="../img/logo-mi2.png" alt="">
+						</div>
+						<div class="profile_data">
+							<p class="name">小米管理员</p>
+							<span>
+								<i class="fas fa-map-marker-alt"></i>
+								中国,武汉
+							</span>
+						</div>
+					</div>
+
+					<ul class="siderbar_menu">
+						<li class="active">
+							<a href="#">
+								<div class="icon">
+									<i class="fas fa-heart"></i>
+								</div>
+								<div class="title">我的喜欢</div>
+							</a>
+						</li>
+						<li class="active">
+							<a href="#">
+								<div class="icon">
+									<i class="fas fa-user"></i>
+								</div>
+								<div class="title">用户详细信息</div>
+								<div class="arrow">
+									<i class="fas fa-chevron-down"></i>
+								</div>
+							</a>
+							<ul class="accordion">
+								<li><a href="#" class="active">子菜单1</a></li>
+								<li><a href="#">子菜单2</a></li>
+								<li><a href="#">子菜单3</a></li>
+								<li><a href="#">子菜单4</a></li>
+								<li><a href="#">子菜单5</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<div class="icon">
+									<i class="fas fa-receipt"></i>
+								</div>
+								<div class="title">用户订单</div>
+								<div class="arrow">
+									<i class="fas fa-chevron-down"></i>
+								</div>
+							</a>
+							<ul class="accordion">
+								<li><a href="#">子菜单1</a></li>
+								<li><a href="#" class="active">子菜单2</a></li>
+								<li><a href="#">子菜单3</a></li>
+								<li><a href="#">子菜单4</a></li>
+								<li><a href="#">子菜单5</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<div class="icon">
+									<i class="fas fa-credit-card"></i>
+								</div>
+								<div class="title">付款信息</div>
+								<div class="arrow">
+									<i class="fas fa-chevron-down"></i>
+								</div>
+							</a>
+							<ul class="accordion">
+								<li><a href="#">子菜单1</a></li>
+								<li><a href="#">子菜单2</a></li>
+								<li><a href="#" class="active">子菜单3</a></li>
+								<li><a href="#">子菜单4</a></li>
+								<li><a href="#">子菜单5</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="logout_btn">
+						<a href="../index.html">返回首页</a>
+					</div>
+				</div>
+			</div>
+			<div class="main_container">
+				<div class="navbar">
+					<div class="hamburger">
+						<i class="fas fa-bars"></i>
+					</div>
+					<div class="logo">
+						<a href="#">小米管理系统</a>
+					</div>
+				</div>
+				<div class="content">
+					<div class="header">
+						<input type="button" value="增加" id="addinfo" class="btn" style="margin-right: 140px;" />
+						<input type="button" value="查询" id="selectinfo" class="btn" />
+					</div>
+					<table id="cj">
+						<thead>
+							<tr>
+								<th>编号</th>
+								<th>账户</th>
+								<th>密码</th>
+								<th>删除</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>18351569917</td>
+								<td>123456</td>
+								<td><span onclick="del(this)">删除</span></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>15261535516</td>
+								<td>123456</td>
+								<td><span onclick="del(this)">删除</span></td>
+							</tr>
+						</tbody>
+					</table>
+
+
+					<div id="add">
+						<h3>添加信息 <span title="关闭" id="close1">&Chi;</span></h3>
+						<form name="addform">
+							账户：<input name="acc" class="text" /><br />
+							密码：<input name="pwd" class="text" /><br />
+							<input type="button" value="确定" id="qd" class="btn1" />
+							<input type="reset" value="取消" class="btn1" />
+						</form>
+					</div>
+					<div id="select">
+						<h3>查询信息 <span title="关闭" id="close2">&Chi;</span></h3>
+						<form name="selectform">
+							请输入要查询用户的账户：<br />
+							<input name="selectId" class="text" /><br />
+							<input type="button" value="查询" id="selectbtn" class="btn1" />
+							<input type="reset" value="取消" class="btn1" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./js/index.js"></script>
+		<script src="js/table.js"></script>
+	</body>
+
+</html>

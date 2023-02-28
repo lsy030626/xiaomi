@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册页面</title>
+		<link rel="icon" href="../img/favicon.ico" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="register.css" />
+		<script src="../js/jquery-3.6.1.min.js"></script>
+		<script src="js/manager.js"></script>
+	</head>
+	<body>
+		<div class="left"></div>
+		<div class="right">
+			<div class="header">
+				<div class="logo">
+					<img src="../img/logo-mi2.png" />
+					<span>小米账号</span>
+				</div>
+				<ul>
+					<li><a href="#">用户协议</a></li>
+					<li><a href="#">隐私政策</a></li>
+					<li><a href="#">帮助中心</a></li>
+					<li class="language">中文（简体）</li>
+				</ul>
+			</div>
+			<div class="content">
+				<div class="login">
+					<div class="login-titile">
+						<a href="login.html" id="login">登录</a>
+						<a href="register.html" id="register" class="current-style">注册</a>
+					</div>
+					<div class="login-content">
+						<div class="input-item">
+							<input type="text" disabled="disabled" value="+86" style="color: #bbb; width: 30%; float: left; border-bottom-right-radius: 0px; border-top-right-radius: 0px;"/>
+							<span class="country">国家码</span>
+							<label><img src="img/xiala.png" class="xiala1"/></label>
+							<input autocomplete="new-password" type="text" required="required" id="phone" style="width: 70%; float: left ; border-bottom-left-radius: 0px; border-top-left-radius: 0px;"/>
+							<span style="left: 35%;">手机号</span>
+						</div>
+						<span id="wrong1">请输入手机号码</span>
+						<div class="input-item password" style="margin-bottom: 30px;">
+							<input autocomplete="new-password" type="text" required="required" id="pwd"/>
+							<span>密码</span>
+							<label>
+								<img src="img/close.png" alt="" id="eye">
+							</label>
+						</div>
+						<span id="wrong3">请输入密码</span>
+						<div class="input-item">
+							<input autocomplete="new-password" type="text" required="required" id="captcha" style="width: 70%; float: left ; border-bottom-right-radius: 0px; border-top-right-radius: 0px;"/>
+							<span >验证码</span>
+							<input type="button" value="获取验证码" class="button" id="yanzheng" />
+						</div>
+						<span id="wrong2">请输入验证码</span>
+						<div class="check">
+							<input type="checkbox" />
+							<span>已阅读并同意小米帐号 <a href="#">用户协议</a> 和 <a href="#">隐私政策</a></span>
+						</div>
+						<input type="button" id="login-button" value="注册" />
+						<div class="forget">
+							<span>收不到验证码？</span>
+						</div>
+						<span class="other-title">其他方式登录</span>
+						<div class="other">
+							<a href="#"><img src="img/zhifubao.png"></a>
+							<a href="#"><img src="img/weixin.png"></a>
+							<a href="#"><img src="img/QQ.png" style="width: 50px; height: 50px;"></a>
+							<a href="#"><img src="img/weibo.png"></a>
+						</div>
+					</div>
+					<div id="alert">
+						<img src="img/jinggao.png" />
+						请你同意用户条款
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<span>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</span>
+			</div>
+		</div>
+		<script src="js/reset.js"></script>
+		<script src="js/register.js"></script>
+	</body>
+</html>
